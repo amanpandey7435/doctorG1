@@ -1,0 +1,29 @@
+body{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* card styling */
+.card{
+    border: none;
+}
+.card:hover{
+    opacity: 0.8;
+}
+.listings{
+    text-decoration: none;
+}
+.card-img-top{
+    border-radius: 5px;
+}
+.all{
+    margin-top: 2rem;
+}
+/* navbar */
+.navbar-brand{
+    font-size: 2rem;
+}
