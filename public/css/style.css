@@ -1,10 +1,11 @@
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+    background-color: #FED2E2;
 }
 
 /* card styling */
@@ -26,4 +27,50 @@ body{
 /* navbar */
 .navbar-brand{
     font-size: 2rem;
+}
+.navbar{
+    padding-left: 1rem;
+    background-color: #8F87F1 !important;
+    margin-bottom: 1rem;
+}
+.nav-item a{
+    color: white !important;
+}
+.nav-item a:hover{
+    text-shadow:3px 3px 3px black;
+}
+
+/* styling the index */
+.index{
+    font-family: "Exo 2", sans-serif !important;
+}
+.card{
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 4px white;
+    ;
+}
+
+/* footer */
+.f-info{
+    background-color: #8F87F1;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.f-info-links, .f-info-socials{
+    width: 100%;
+}
+ .f-info-socials i{
+    margin-right: 1rem;
+}
+
+.f-info-links a,.f-info-brand,.f-info{
+    text-decoration: none;
+    color: white !important;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
 }

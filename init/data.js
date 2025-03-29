@@ -6,7 +6,7 @@ const doctors = [
       phone: 5550123456,
       email: "ava.roberts@email.com",
       price: 250,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Noah Turner",
@@ -15,7 +15,7 @@ const doctors = [
       phone: 5550123456,
       email: "noah.turner@email.com",
       price: 220,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Mia Allen",
@@ -24,7 +24,7 @@ const doctors = [
       phone: 5550123456,
       email: "mia.allen@email.com",
       price: 180,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Ethan Harris",
@@ -33,7 +33,7 @@ const doctors = [
       phone: 5550123456,
       email: "ethan.harris@email.com",
       price: 300,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Isabella Martinez",
@@ -42,7 +42,7 @@ const doctors = [
       phone: 5550123456,
       email: "isabella.martinez@email.com",
       price: 270,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Lucas Gonzalez",
@@ -51,7 +51,7 @@ const doctors = [
       phone: 5550123456,
       email: "lucas.gonzalez@email.com",
       price: 230,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Sophia Perez",
@@ -60,7 +60,7 @@ const doctors = [
       phone: 5550123456,
       email: "sophia.perez@email.com",
       price: 320,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Liam Walker",
@@ -69,7 +69,7 @@ const doctors = [
       phone: 5550123456,
       email: "liam.walker@email.com",
       price: 250,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Charlotte Scott",
@@ -78,7 +78,7 @@ const doctors = [
       phone: 5550123456,
       email: "charlotte.scott@email.com",
       price: 275,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Benjamin White",
@@ -87,7 +87,7 @@ const doctors = [
       phone: 5550123456,
       email: "benjamin.white@email.com",
       price: 300,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Grace Thompson",
@@ -96,7 +96,7 @@ const doctors = [
       phone: 5550123456,
       email: "grace.thompson@email.com",
       price: 350,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Alexander Clark",
@@ -105,7 +105,7 @@ const doctors = [
       phone: 5550123456,
       email: "alexander.clark@email.com",
       price: 240,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Abigail Moore",
@@ -114,7 +114,7 @@ const doctors = [
       phone: 5550123456,
       email: "abigail.moore@email.com",
       price: 220,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. James Lewis",
@@ -123,7 +123,7 @@ const doctors = [
       phone: 5550123456,
       email: "james.lewis@email.com",
       price: 450,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Harper Lee",
@@ -132,7 +132,7 @@ const doctors = [
       phone: 5550123456,
       email: "harper.lee@email.com",
       price: 260,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Daniel Harris",
@@ -141,7 +141,7 @@ const doctors = [
       phone: 5550123456,
       email: "daniel.harris@email.com",
       price: 280,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Ella King",
@@ -150,7 +150,7 @@ const doctors = [
       phone: 5550123456,
       email: "ella.king@email.com",
       price: 210,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Matthew Evans",
@@ -159,7 +159,7 @@ const doctors = [
       phone: 5550123456,
       email: "matthew.evans@email.com",
       price: 350,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Lily Green",
@@ -168,7 +168,7 @@ const doctors = [
       phone: 5550123456,
       email: "lily.green@email.com",
       price: 230,
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image:"https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     },
     {
       name: "Dr. Oliver Carter",
@@ -177,7 +177,7 @@ const doctors = [
       phone: 5550123456,
       email: "oliver.carter@email.com",
       price: 200,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RMiyZFISTcW0YgeOGUT2QSU9NCYZ-uuvVw&s"
+      image: "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
     }
   ];
 module.exports={data:doctors};
