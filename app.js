@@ -30,8 +30,12 @@ async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/doctorg1');
 }
 
+// requiring ejs-mate
+engine = require('ejs-mate');
+app.engine('ejs', engine);
 
+
+// requiring controllers
+const doctorsRouter=require("./routes/listings");
 // home route
-app.get("/",(req,res)=>{
-    res.send("Port is listening");
-})
+app.use("/",doctorsRouter);
