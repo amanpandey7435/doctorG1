@@ -7,6 +7,19 @@ body{
     "wdth" 100;
     background-color: #FED2E2;
 }
+/* adjusting footer and navbar */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+
+
+
+
 
 /* card styling */
 .card{
@@ -74,4 +87,18 @@ body{
 }
 .f-info-links a:hover{
     text-decoration: underline;
+}
+
+
+/* ones */
+.ones:hover{
+    opacity: 1;
+}
+/* show route */
+.button{
+    display: flex;
+   
+   width:20rem;
+   justify-content: space-between;
+
 }

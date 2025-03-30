@@ -8,7 +8,10 @@ router.route("/")
 .get(doctorsController.index);
 
 router.route("/:id")
-.get(doctorsController.show);
+.get(doctorsController.show)
+.delete(doctorsController.deleteListing);
+router.route("/:id/editListing")
+.get(doctorsController.editlisting);
 
 
 module.exports=router;

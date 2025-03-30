@@ -1,5 +1,24 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
-<div class="main">
-    <%=doctor%>
-
+<div class="row">
+    <div class="card ones" style="width: 35rem;">
+        <img src="<%=doctor.image%>"  class="card-img-top" alt="..." style="margin-top: 0.5rem;height:20rem;">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold;"><%=doctor.name%></h5>
+          <ul>
+            <li><p>Specializations:&nbsp;&nbsp;&nbsp;<%=doctor.specializations%></li></p>
+            <li><p>Book Appointment for just:&#8377;<%=doctor.price%></li></p>
+            <li><p>Email-Id:<%=doctor.email%></li></p>
+            <li><p>Contact No:&nbsp;&nbsp;&nbsp;<%=doctor.phone%></li></p>
+            <li><p>Address:&nbsp;&nbsp;<%=doctor.address%></li></p>
+          </ul>
+          <div class="button">
+            <form action="/<%=doctor._id%>/editlisting" method="GET">
+                <button class="btn btn-outline-secondary"  >Edit Your Listing</button>
+              </form>
+              <form action="/<%=doctor._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-outline-danger">Delete</button>
+              </form>
+          </div>
+        </div>
+      </div>
 </div>

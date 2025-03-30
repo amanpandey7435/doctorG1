@@ -8,6 +8,7 @@ const path=require("path");
 
 // requiring method-override
 const methodOverride=require("method-override");
+app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 
