@@ -1,18 +1,25 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
 <div class="row offset-2 col-8">
     <h1>Update Your Details</h1>
-<form action="/<%=doctor._id%>?method_PUT" class="needs-validation" novalidate method="POST">
+<form method="post" action="/<%=doctor._id%>?_method=put" class="needs-validation" novalidate >
+    <div class="mb-3">
     <label for="name" class="form-label">Username:</label>
     <input type="text" class="form-control" name="doctor[name]" id="name" required value="<%=doctor.name%>"></input>
-    <label for="specialization" class="form-label">Specialization</label>
+</div>
+<div class="mb-3">
+
+    <label for="specialization" class="form-label">Add Specializations Separated by a ","(e.g:Cardiologist,dentist)</label>
     <input type="text" class="form-control" required name="doctor[specializations]" id="specialization" value="<%=doctor.specializations%>">
+    </div>
+    <div class="mb-3">
     <label for="phone" class="form-label">Phone Number:</label>
-    <input type="number" class="form-control" required name="doctor[phone]" id="phone" value="<%=doctor.phone%>">
-   <div class="row">
+    <input type="number" class="form-control" required name="doctor[phone]" id="phone" value=<%=doctor.phone%>>
+    </div>
+    <div class="row">
     <div class="mb-3 col-4">
         
     <label for="price" class="form-label">Enter Price:</label>
-    <input type="price" class="form-control" required name="doctor[price]" id="price" value="&#8377;<%=doctor.price%>">
+    <input type="price" class="form-control" required name="doctor[price]" id="price" value=<%=doctor.price%>>
     </div>
 
     <div class="mb-3 col-8">
@@ -24,7 +31,7 @@
     
    
     <label for="address" class="form-label">Address:</label>
-    <input type="address" class="form-control" required name="doctor[address]" id="address" value="&#8377;<%=doctor.address%>">
+    <input type="address" class="form-control" required name="doctor[address]" id="address" value="<%=doctor.address%>">
     <button  class="btn btn-secondary mt-3 width:3rem" style="width:7rem;">Edit</button>
 </form>
 </div>
