@@ -46,9 +46,10 @@ body{
 }
 .card{
     margin-bottom: 1rem;
-    box-shadow: 4px 4px 4px white;
-    ;
+    box-shadow: 4px 4px 4px white ;
+    
 }
+
 
 /* footer */
 .f-info{
