@@ -1,2 +1,30 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
-<h1>Aman Pandey</h1>
+<div class="row offset-2 col-8">
+    <h1>Update Your Details</h1>
+<form action="">
+    <label for="name" class="form-label">Username:</label>
+    <input type="text" class="form-control" name="doctor[name]" id="name" value="<%=doctor.name%>"></input>
+    <label for="specialization" class="form-label">Specialization</label>
+    <input type="text" class="form-control" name="doctor[specializations]" id="specialization" value="<%=doctor.specializations%>">
+    <label for="phone" class="form-label">Phone Number:</label>
+    <input type="number" class="form-control" name="doctor[phone]" id="phone" value="<%=doctor.phone%>">
+   <div class="row">
+    <div class="mb-3 col-4">
+        
+    <label for="price" class="form-label">Enter Price:</label>
+    <input type="price" class="form-control" name="doctor[price]" id="price" value="&#8377;<%=doctor.price%>">
+    </div>
+
+    <div class="mb-3 col-8">
+        
+    <label for="email" class="form-label">EmailId:</label>
+    <input type="text" class="form-control" name="doctor[email]" id="email" value="<%=doctor.email%>">
+    </div>
+   </div>
+    
+   
+    <label for="address" class="form-label">Address:</label>
+    <input type="address" class="form-control" name="doctor[address]" id="address" value="&#8377;<%=doctor.address%>">
+    <button type="button" class="btn btn-secondary mt-3 width:3rem" style="width:7rem;">Edit</button>
+</form>
+</div>

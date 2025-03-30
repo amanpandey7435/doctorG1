@@ -16,6 +16,7 @@ module.exports.deleteListing=wrapAsync(async(req,res)=>{
     res.redirect("/");
 })
 module.exports.editlisting=wrapAsync(async(req,res)=>{
-
-    res.render("listings/edit.ejs");
+    let {id}=req.params;
+    const doctor=await Doctor.findById(id);
+    res.render("listings/edit.ejs",{doctor});
 })
