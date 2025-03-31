@@ -7,7 +7,7 @@ const {validateListing}=require("../middlewares.js");
 
 router.route("/")
 .get(doctorsController.index)
-.post(validateListing,doctorsController.newPostroute);
+.post(doctorsController.newPostroute);
 
 router.route("/new")
 .get(doctorsController.new);

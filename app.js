@@ -44,6 +44,9 @@ app.use("/",doctorsRouter);
 
 //requiring and express error handling
 const ExpressError=require("./utils/ExpressError");
+app.all("*", (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found"));
+});
 app.use((err,req,res,next)=>{
     let {statusCode=500,message="Something Went Wrong"}=err;
     console.log(err.message);
@@ -51,3 +54,4 @@ app.use((err,req,res,next)=>{
 });
 
 
+  
