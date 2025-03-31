@@ -5,18 +5,18 @@
         <div class="card-body">
           <h5 class="card-title" style="font-weight: bold;"><%=doctor.name%></h5>
           <ul>
-            <li><p>Specializations:&nbsp;&nbsp;&nbsp;<%=doctor.specializations%></li></p>
+            <li><p>Specializations:&nbsp;<%=doctor.specializations%></li></p>
             <li><p>Book Appointment for just:&#8377;<%=doctor.price%></li></p>
             <li><p>Email-Id:<%=doctor.email%></li></p>
-            <li><p>Contact No:&nbsp;&nbsp;&nbsp;<%=doctor.phone%></li></p>
-            <li><p>Address:&nbsp;&nbsp;<%=doctor.address%></li></p>
+            <li><p>Contact No:&nbsp;<%=doctor.phone%></li></p>
+            <li><p>Address:&nbsp;<%=doctor.address%></li></p>
           </ul>
           <div class="button">
             <form action="/<%=doctor._id%>/editlisting" method="GET">
-                <button class="btn btn-outline-secondary"  >Edit Your Listing</button>
+                <button class="btn btn-secondary edit-btn"  >Edit Your Listing</button>
               </form>
               <form action="/<%=doctor._id%>?_method=DELETE" method="POST">
-                <button class="btn btn-outline-danger">Delete</button>
+                <button class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i>Delete</button>
               </form>
           </div>
         </div>

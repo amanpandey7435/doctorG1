@@ -15,7 +15,7 @@
     <div class="row">
 <div class="mb-3 col-md-4">
         <lable for="price" class="form-label">Enter Price</lable>
-        <input  name="doctor[price]" placeholder="Enter Price" class="form-control" required/>
+        <input type="number"  name="doctor[price]" placeholder="Enter Price" class="form-control" required/>
         <div class="invalid-feedback">Invalid Price</div>
     </div>
     <div class="mb-3 col-md-8">
@@ -35,18 +35,18 @@
         <input type="text" name="doctor[image]" placeholder="Image/optional" class="form-control"/>
     </div>
         
-        <div class="mb-3">
+        <div class="mb-1">
             <lable for="country" class="form-label">Your Email-id</lable>
             <input type="text" name="doctor[email]" placeholder="Email" class="form-control" required/>
             <div class="invalid-feedback">Invalid Email-id</div>
         </div>
-    <div class="mb-3">
+    <div class="">
         <lable for="image" class="form-label">Enter your speacializations separated by a ","</lable>
         <input type="text" name="doctor[specializations]" placeholder="e.g: Cardiology,Neuro Surgeon,Dentist" class="form-control" required/>
     </div>
     <br>
-    <div class="mb-5">
-        <button class="btn btn-dark mt-3 mb-4 add-btn">Add</button>
+    <div>
+        <button class="btn btn-secondary mt-3 mb-4 add-btn">Add</button>
     </div>
     </form>
 </div>
