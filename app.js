@@ -69,19 +69,15 @@ async function main() {
 
 // requiring controllers
 const doctorsRouter=require("./routes/listings");
-const userRouter=require("./routes/user.js");
-// session-options
 
-
-
-
-
-
+const userRouter = require("./routes/user.js");
+const reviewsRouter = require("./routes/review");
 
 // home route
+app.use("/", doctorsRouter);
+app.use("/user", userRouter);
+app.use("/reviews", reviewsRouter);
 
-app.use("/",doctorsRouter);
-app.use("/user",userRouter);
 
 //requiring and express error handling
 const ExpressError=require("./utils/ExpressError");
@@ -91,7 +87,7 @@ app.all("*", (req, res, next) => {
 });
 app.use((err,req,res,next)=>{
     let {statusCode=500,message="Something Went Wrong"}=err;
-    console.log(err.message);
+    console.log(err);
     res.status(statusCode).render("listings/error.ejs",{err});
 });
 

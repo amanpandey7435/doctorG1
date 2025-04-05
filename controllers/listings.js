@@ -1,4 +1,5 @@
 const Doctor=require("../models/doctor.js");
+const Review=require("../models/review.js")
 const wrapAsync = require("../utils/wrapAsync.js");
 const mongoose=require("mongoose");
 module.exports.index=wrapAsync(async(req,res,next)=>{
@@ -8,7 +9,7 @@ module.exports.index=wrapAsync(async(req,res,next)=>{
 
 module.exports.show=wrapAsync(async(req,res,next)=>{
     let {id}=req.params;
-    const doctor=await Doctor.findById(id);
+    const doctor=await Doctor.findById(id).populate({path:"review"});
     res.render("listings/show.ejs",{doctor});
 });
 
@@ -20,6 +21,9 @@ module.exports.newPostroute=wrapAsync(async(req,res,next)=>{
     const doctor=new Doctor(req.body.doctor);
     const specArray=req.body.doctor.specializations.split(",");
     doctor.specializations=specArray;
+    const rev=new Review();
+    rev.save()
+    doctor.review.push(rev);
     await doctor.save();
     return res.redirect("/");
 })

@@ -118,18 +118,26 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0
     border: 2px solid white;
     width:6rem;
 }
-.search-btn{
-    border-radius:3rem ;
-    
-    
-}
-.search-input{
+.search-btn {
     border-radius: 3rem;
 }
-/* .add-btn:hover{
+
+.search-input {
+    border-radius: 3rem;
+}
+
+/* .add-btn:hover {
     background-color: #060661;
     border: 2px solid white;
     color: white;
     font-size: large;
-} */ */
+} */
+
 /* login logout designing */
+
+/* review card styling */
+/* .reviewCard {
+    border: 4px solid rgba(9, 9, 121, 1);
+    background: linear-gradient(135deg, rgba(173, 216, 230, 1), rgba(186, 104, 200, 1));
+} */
+
