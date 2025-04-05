@@ -39,8 +39,12 @@ app.engine('ejs', engine);
 
 // requiring controllers
 const doctorsRouter=require("./routes/listings");
+const reviewsRouter=require("./routes/review");
 // home route
+
 app.use("/",doctorsRouter);
+app.use("/reviews",reviewsRouter);
+
 
 //requiring and express error handling
 const ExpressError=require("./utils/ExpressError");
@@ -49,7 +53,7 @@ app.all("*", (req, res, next) => {
 });
 app.use((err,req,res,next)=>{
     let {statusCode=500,message="Something Went Wrong"}=err;
-    console.log(err.message);
+    console.log(err);
     res.status(statusCode).render("listings/error.ejs",{err});
 });
 

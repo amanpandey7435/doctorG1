@@ -16,6 +16,10 @@ const doctorSchema=new Schema({
             ? "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
             : v,
       },
+    review:[{
+      type:Schema.Types.ObjectId,
+      ref:"Review"
+    }]
 })
 const Doctor=mongoose.model("Listing",doctorSchema);
 module.exports=Doctor;
