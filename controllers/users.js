@@ -9,7 +9,6 @@ module.exports.aftersignup=(async(req,res,next)=>{
         let {username,email,password}=req.body;
         let newUser=new User({email,username});
         const registeredUser=await User.register(newUser,password);
-        console.log(registeredUser);
         res.redirect("/");
 
     }

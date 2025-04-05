@@ -4,7 +4,7 @@
         <div class="col-6 offset-3">
     <h1>New Doctor</h1>
     
-    <form action="/" method="post" class="needs-validation" novalidate>
+    <form action="/" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="mb-3">
         <lable for="name" class="form-label">Enter Name</lable>
         <input type="text" name="doctor[name]" placeholder="Enter Name" class="form-control" required/>
@@ -32,7 +32,7 @@
 
     <div class="mb-3">
         <lable for="image" class="form-label">Image url</lable>
-        <input type="text" name="doctor[image]" placeholder="Image/optional" class="form-control"/>
+        <input type="file" name="doctor[image]" placeholder="Image/optional" class="form-control"/>
     </div>
         
         <div class="mb-1">

@@ -34,6 +34,9 @@ body{
 .card-img-top{
     border-radius: 5px;
 }
+.index-image{
+height: 250px;
+}
 .all{
     margin-top: 2rem;
 }

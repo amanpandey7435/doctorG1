@@ -7,15 +7,14 @@ const doctorSchema=new Schema({
     phone:{type:Number,required:true},
     email:{type:String,required:true},
     price:{type:Number,required:true},
-    image: {
-        type: String,
-        default:
-          "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg",
-        set: (v) =>
-          v === ""
-            ? "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg"
-            : v,
-      },
+    image:{
+        url:{type: String,
+          default:
+            "https://img.freepik.com/free-photo/3d-cartoon-style-character_23-2151034061.jpg",},
+        filename:{
+          type:String,
+          default:""}
+    },
     review:[{
       type:Schema.Types.ObjectId,
       ref:"Review"
