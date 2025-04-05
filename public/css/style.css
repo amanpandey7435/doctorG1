@@ -46,9 +46,11 @@ body{
     /* background-color: #8F87F1 !important; */
     /* background-color: #00004E !important; */
     /* background-color:  rgba(0,212,255,1)!important; */
-    background: rgb(2,0,36);
+    /* background: rgb(2,0,36);
    
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%); */
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
     margin-bottom: 1rem;
     
 }
@@ -116,9 +118,18 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(
     border: 2px solid white;
     width:6rem;
 }
+.search-btn{
+    border-radius:3rem ;
+    
+    
+}
+.search-input{
+    border-radius: 3rem;
+}
 /* .add-btn:hover{
     background-color: #060661;
     border: 2px solid white;
     color: white;
     font-size: large;
 } */ */
+/* login logout designing */

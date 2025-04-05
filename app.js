@@ -2,6 +2,9 @@
 // requiring express
 const express=require("express");
 const app=express();
+const session=require("express-session");
+const passport=require("passport");
+const LocalStrategy=require("passport-local");
 const port=8080;
 // path
 const path=require("path");
@@ -12,13 +15,43 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-
+// requiring user from model
+const User=require("./models/user.js");
 
 // basic setup
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
 app.use(express.static(path.join(__dirname,"public")));
 
+// requiring ejs-mate
+engine = require('ejs-mate');
+app.engine('ejs', engine);
+
+
+// session-options
+const sessionOptions = {
+    secret: "amanpandey",
+    resave: false,
+    saveUninitialized: true, 
+    cookie: {
+        expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 3), 
+        httpOnly: true // Fixed case
+    },
+};
+app.use(session(sessionOptions));
+
+// passport setup code
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+app.use((req,res,next)=>{
+    res.locals.currUser=req.user;
+    next();
+  })
 
 // listening route
 app.listen(port,()=>{
@@ -32,18 +65,27 @@ async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/doctorg1');
 }
 
-// requiring ejs-mate
-engine = require('ejs-mate');
-app.engine('ejs', engine);
 
 
 // requiring controllers
 const doctorsRouter=require("./routes/listings");
+const userRouter=require("./routes/user.js");
+// session-options
+
+
+
+
+
+
+
 // home route
+
 app.use("/",doctorsRouter);
+app.use("/user",userRouter);
 
 //requiring and express error handling
 const ExpressError=require("./utils/ExpressError");
+const { Cookie } = require("express-session");
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found"));
 });

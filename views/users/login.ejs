@@ -1,0 +1,40 @@
+<% layout('/layouts/boilerplateCode.ejs') -%>
+<div class="row col-4 offset-4 mt-5">
+    <h1>Login to DoctorG</h1>
+    <form action="/user/login" method="POST" class="needs-validation" novalidate>
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" placeholder="Enter your username" name="username" required>
+        <div class="invalid-feedback">
+            <p>Re-enter username</p>
+        </div>
+        <label for="password" class="form-label">Password:</label>
+        <div class="input-group">
+          
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" name="password" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                👁️
+            </button>
+        </div>
+        <div class="invalid-feedback">
+            <p>OOPs! Password Looks Incorrect</p>
+        </div>
+        <button  class="btn btn-primary mt-3">Login</button>
+        
+    </form>
+</div>
+<script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+    togglePassword.addEventListener("click", () => {
+        // Toggle the type attribute
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.textContent = "🙈";  
+        } else {
+            passwordInput.type = "password";
+            togglePassword.textContent = "👁️";  
+        }
+    });
+</script>
+

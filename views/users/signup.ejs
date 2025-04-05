@@ -1,0 +1,40 @@
+<% layout('/layouts/boilerplateCode.ejs') -%>
+<div class="row col-4 offset-4 mt-5">
+    <h1>Register to DoctorG</h1>
+    <form action="/user/signup" method="POST" class="needs-validation" novalidate>
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" placeholder="Enter your username" name="username" required>
+        
+        <label for="email" class="form-label">Email-id:</label>
+        <input type="email" class="form-control" placeholder="Enter mail-Id" name="email" required>
+
+
+        <label for="password" class="form-label">Password:</label>
+<div class="input-group">
+    <input type="password" id="password" class="form-control" placeholder="Enter your password" name="password" required>
+    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+        👁️
+    </button>
+</div>
+        <div class="invalid-feedback">
+            <p>OOPs! Password Looks Incorrect</p>
+        </div>
+        <button  class="btn btn-primary mt-3">Signin</button>
+        
+    </form>
+</div>
+<script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+    togglePassword.addEventListener("click", () => {
+        // Toggle the type attribute
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.textContent = "🙈";  // Change icon
+        } else {
+            passwordInput.type = "password";
+            togglePassword.textContent = "👁️";  // Change back to eye icon
+        }
+    });
+</script>
