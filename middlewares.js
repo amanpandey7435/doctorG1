@@ -11,3 +11,9 @@ module.exports.validateListing = (req, res, next) => {
         next();
     }
 };
+module.exports.isLoggedIn=(req,res,next)=>{
+    if(!req.isAuthenticated()){
+        return res.redirect("/user/login");
+    }
+    next();
+}

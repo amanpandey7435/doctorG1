@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 const doctorsController=require("../controllers/listings.js");
 const wrapAsync=require("../utils/wrapAsync.js");
-const {validateListing}=require("../middlewares.js");
+const {validateListing, isLoggedIn}=require("../middlewares.js");
 
 
 router.route("/")
@@ -10,14 +10,14 @@ router.route("/")
 .post(doctorsController.newPostroute);
 
 router.route("/new")
-.get(doctorsController.new);
+.get(isLoggedIn,doctorsController.new);
 
 router.route("/:id")
 .get(doctorsController.show)
-.delete(doctorsController.deleteListing)
-.put(validateListing,doctorsController.updateListing);
+.delete(isLoggedIn,doctorsController.deleteListing)
+.put(isLoggedIn,validateListing,doctorsController.updateListing);
 router.route("/:id/editListing")
-.get(doctorsController.editlisting);
+.get(isLoggedIn,doctorsController.editlisting);
 
 
 module.exports=router;

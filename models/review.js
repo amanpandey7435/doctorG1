@@ -4,7 +4,7 @@ const Schema=mongoose.Schema;
 const reviewSchema=new Schema({
     comment:{
         type:String,
-        required:true
+        
     },
     rating:{
         type:Number,
