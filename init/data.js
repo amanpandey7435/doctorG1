@@ -6,6 +6,7 @@ const doctors = [
       phone: 5550123456,
       email: "ava.roberts@email.com",
       price: 250,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Noah Turner",
@@ -14,6 +15,7 @@ const doctors = [
       phone: 5550123456,
       email: "noah.turner@email.com",
       price: 220,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Mia Allen",
@@ -22,6 +24,7 @@ const doctors = [
       phone: 5550123456,
       email: "mia.allen@email.com",
       price: 180,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Ethan Harris",
@@ -30,6 +33,7 @@ const doctors = [
       phone: 5550123456,
       email: "ethan.harris@email.com",
       price: 300,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Isabella Martinez",
@@ -38,6 +42,7 @@ const doctors = [
       phone: 5550123456,
       email: "isabella.martinez@email.com",
       price: 270,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Lucas Gonzalez",
@@ -46,6 +51,7 @@ const doctors = [
       phone: 5550123456,
       email: "lucas.gonzalez@email.com",
       price: 230,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Sophia Perez",
@@ -54,6 +60,7 @@ const doctors = [
       phone: 5550123456,
       email: "sophia.perez@email.com",
       price: 320,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Liam Walker",
@@ -62,6 +69,7 @@ const doctors = [
       phone: 5550123456,
       email: "liam.walker@email.com",
       price: 250,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Charlotte Scott",
@@ -70,6 +78,7 @@ const doctors = [
       phone: 5550123456,
       email: "charlotte.scott@email.com",
       price: 275,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Benjamin White",
@@ -78,6 +87,7 @@ const doctors = [
       phone: 5550123456,
       email: "benjamin.white@email.com",
       price: 300,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Grace Thompson",
@@ -86,6 +96,7 @@ const doctors = [
       phone: 5550123456,
       email: "grace.thompson@email.com",
       price: 350,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Alexander Clark",
@@ -94,6 +105,7 @@ const doctors = [
       phone: 5550123456,
       email: "alexander.clark@email.com",
       price: 240,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Abigail Moore",
@@ -102,6 +114,7 @@ const doctors = [
       phone: 5550123456,
       email: "abigail.moore@email.com",
       price: 220,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. James Lewis",
@@ -110,6 +123,7 @@ const doctors = [
       phone: 5550123456,
       email: "james.lewis@email.com",
       price: 450,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Harper Lee",
@@ -118,6 +132,7 @@ const doctors = [
       phone: 5550123456,
       email: "harper.lee@email.com",
       price: 260,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Daniel Harris",
@@ -126,6 +141,7 @@ const doctors = [
       phone: 5550123456,
       email: "daniel.harris@email.com",
       price: 280,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Ella King",
@@ -134,6 +150,7 @@ const doctors = [
       phone: 5550123456,
       email: "ella.king@email.com",
       price: 210,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Matthew Evans",
@@ -142,6 +159,7 @@ const doctors = [
       phone: 5550123456,
       email: "matthew.evans@email.com",
       price: 350,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Lily Green",
@@ -150,6 +168,7 @@ const doctors = [
       phone: 5550123456,
       email: "lily.green@email.com",
       price: 230,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Oliver Carter",
@@ -158,6 +177,7 @@ const doctors = [
       phone: 5550123456,
       email: "oliver.carter@email.com",
       price: 200,
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     }
   ];
 module.exports={data:doctors};

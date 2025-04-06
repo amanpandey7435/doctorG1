@@ -2,6 +2,7 @@ const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
 const doctorSchema=new Schema({
     name:{type:String,required:true},
+    description:{type:String,required:true},
     specializations: [{ type: String, required: true }],
     address:{type:String,required:true},
     phone:{type:Number,required:true},
@@ -18,7 +19,11 @@ const doctorSchema=new Schema({
     review:[{
       type:Schema.Types.ObjectId,
       ref:"Review"
-    }]
+    }],
+    owner:{
+      type:Schema.Types.ObjectId,
+      ref:"User"
+    }
 })
 const Doctor=mongoose.model("Listing",doctorSchema);
 module.exports=Doctor;

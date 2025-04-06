@@ -14,8 +14,8 @@ const reviewSchema=new Schema({
         default:Date.now()
     },
     author:{
-        type:String,
-        default:"John"
+        type:Schema.Types.ObjectId,
+        ref:"User"
     }
 
 })

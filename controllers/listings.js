@@ -10,7 +10,7 @@ module.exports.index=wrapAsync(async(req,res,next)=>{
 
 module.exports.show=wrapAsync(async(req,res,next)=>{
     let {id}=req.params;
-    const doctor=await Doctor.findById(id).populate({path:"review"});
+    const doctor=await Doctor.findById(id).populate({path:"review",populate:{path:"author"}}).populate({path:"owner"});
     res.render("listings/show.ejs",{doctor});
 });
 
@@ -25,10 +25,10 @@ module.exports.newPostroute=wrapAsync(async(req,res,next)=>{
     const specArray=req.body.doctor.specializations.split(",");
     doctor.specializations=specArray;
     doctor.image=await {url,filename};
-    const rev=new Review();
-    rev.save()
-    doctor.review.push(rev);
+    doctor.owner=req.user._id;
+    
     await doctor.save();
+    req.flash("success","New Doctor Added");
     return res.redirect("/");
 })
 
@@ -38,12 +38,14 @@ module.exports.updateListing=wrapAsync(async(req,res)=>{
     let specArray=specializations.split(",");
     const doctor=await Doctor.findByIdAndUpdate(id,{...rest,specializations:specArray},{new:true});
     await doctor.save();
+    req.flash("success","Details Updated");
     return res.redirect(`/${id}`);
 })
 
 module.exports.deleteListing=wrapAsync(async(req,res,next)=>{
     let {id}=req.params;
     const doctor=await Doctor.findByIdAndDelete(id);
+    req.flash("failure","Doctor's Profile Deleted");
     res.redirect("/");
 })
 module.exports.editlisting=wrapAsync(async(req,res,next)=>{
