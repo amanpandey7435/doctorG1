@@ -9,7 +9,7 @@ module.exports.aftersignup=(async(req,res,next)=>{
         let {username,email,password}=req.body;
         let newUser=new User({email,username});
         const registeredUser=await User.register(newUser,password);
-        console.log(registeredUser);
+        req.flash("success","Welcome User")
         res.redirect("/");
 
     }
@@ -19,10 +19,11 @@ module.exports.aftersignup=(async(req,res,next)=>{
 })
 module.exports.userLogin=(async(req,res,next)=>{
     try{
+        req.flash("success","Logged In");
         res.redirect("/");
     }
     catch(err){
-        res.rediect("/user/signup");
+        res.redirect("/user/signup");
     }
 })
 module.exports.userloginForm=((req,res)=>{

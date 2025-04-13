@@ -2,6 +2,7 @@ const Joi=require("joi");
 module.exports.doctorSchema=Joi.object({
     doctor:Joi.object({
         name:Joi.string().required(),
+        description:Joi.string().required(),
         address:Joi.string().required(),
         price:Joi.number().required().min(1),
         phone:Joi.number().required(),

@@ -1,23 +1,25 @@
-const express=require("express");
-const router=express.Router();
-const doctorsController=require("../controllers/listings.js");
-const wrapAsync=require("../utils/wrapAsync.js");
-const {validateListing, isLoggedIn}=require("../middlewares.js");
-
+const express = require("express");
+const router = express.Router();
+const doctorsController = require("../controllers/listings.js");
+const wrapAsync = require("../utils/wrapAsync.js");
+const { validateListing, isLoggedIn, isOwner } = require("../middlewares.js");
+const multer = require("multer");
+const { storage } = require("../cloudconfig.js");
+const upload = multer({ storage });
 
 router.route("/")
-.get(doctorsController.index)
-.post(doctorsController.newPostroute);
+    .get(doctorsController.index)
+    .post(isLoggedIn, upload.single('doctor[image]'), validateListing, doctorsController.newPostroute);
 
 router.route("/new")
-.get(isLoggedIn,doctorsController.new);
+    .get(isLoggedIn, doctorsController.new);
 
 router.route("/:id")
-.get(doctorsController.show)
-.delete(isLoggedIn,doctorsController.deleteListing)
-.put(isLoggedIn,validateListing,doctorsController.updateListing);
+    .get(doctorsController.show)
+    .delete(isLoggedIn, isOwner, doctorsController.deleteListing)
+    .put(isLoggedIn, upload.single('doctor[image]'), validateListing, isOwner, doctorsController.updateListing);
+
 router.route("/:id/editListing")
-.get(isLoggedIn,doctorsController.editlisting);
+    .get(isLoggedIn, isOwner, doctorsController.editlisting);
 
-
-module.exports=router;
+module.exports = router;

@@ -6,7 +6,7 @@ const doctors = [
       phone: 5550123456,
       email: "ava.roberts@email.com",
       price: 250,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Noah Turner",
@@ -15,7 +15,7 @@ const doctors = [
       phone: 5550123456,
       email: "noah.turner@email.com",
       price: 220,
-      image: "https://plus.unsplash.com/premium_photo-1661766718556-13c2efac1388?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Mia Allen",
@@ -24,7 +24,7 @@ const doctors = [
       phone: 5550123456,
       email: "mia.allen@email.com",
       price: 180,
-      image: "https://images.unsplash.com/photo-1606318313647-137d1f3b4d3c?q=80&w=2077&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Ethan Harris",
@@ -33,7 +33,7 @@ const doctors = [
       phone: 5550123456,
       email: "ethan.harris@email.com",
       price: 300,
-      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2091&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Isabella Martinez",
@@ -42,7 +42,7 @@ const doctors = [
       phone: 5550123456,
       email: "isabella.martinez@email.com",
       price: 270,
-      image: "https://media.istockphoto.com/id/1301595548/photo/female-doctor-stock-photo.jpg?s=2048x2048&w=is&k=20&c=BLoZsEopjCiEvwmyyy7LZqrRkrB7nvvhwzJsN5bZc9Y="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Lucas Gonzalez",
@@ -51,7 +51,7 @@ const doctors = [
       phone: 5550123456,
       email: "lucas.gonzalez@email.com",
       price: 230,
-      image: "https://media.istockphoto.com/id/1320003833/photo/portrait-of-happy-caucasian-female-doctor-with-stethoscope-smile-in-arms-crossed-look-at.jpg?s=2048x2048&w=is&k=20&c=MgrbG-3Sgq-jtnMx9uaBU1NQYpiR49LJ-wUYWQ18HY4="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Sophia Perez",
@@ -60,7 +60,7 @@ const doctors = [
       phone: 5550123456,
       email: "sophia.perez@email.com",
       price: 320,
-      image:"https://media.istockphoto.com/id/1015146822/photo/beautiful-doctor-standing-in-the-hospital.jpg?s=2048x2048&w=is&k=20&c=VZN7CFwOGPN4h_WSh2P_EVlRhAraIYuRVHjnYjw7r9s="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Liam Walker",
@@ -69,7 +69,7 @@ const doctors = [
       phone: 5550123456,
       email: "liam.walker@email.com",
       price: 250,
-      image: "https://media.istockphoto.com/id/1355276152/photo/young-female-doctor.jpg?s=2048x2048&w=is&k=20&c=X71A3YQ1aL4Kv5loznUF8JzoP9KoNrQld0fK3wZ5Bpo="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Charlotte Scott",
@@ -78,7 +78,7 @@ const doctors = [
       phone: 5550123456,
       email: "charlotte.scott@email.com",
       price: 275,
-      image:"https://media.istockphoto.com/id/1367507209/photo/portrait-of-indian-female-doctor-stock-photo.jpg?s=2048x2048&w=is&k=20&c=2pWNhHrCO--osTC9IuS9Pv6Ba7DiQVcZMdyqgHpdni4="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Benjamin White",
@@ -87,7 +87,7 @@ const doctors = [
       phone: 5550123456,
       email: "benjamin.white@email.com",
       price: 300,
-      image: "https://media.istockphoto.com/id/1292860546/photo/portrait-female-doctor-stock-photo.jpg?s=2048x2048&w=is&k=20&c=5s6YMDFGMDm91gv6fjspNPYTK_0xPF5PsLnguGwviXU="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Grace Thompson",
@@ -96,7 +96,7 @@ const doctors = [
       phone: 5550123456,
       email: "grace.thompson@email.com",
       price: 350,
-      image: "https://media.istockphoto.com/id/1212211519/photo/portrait-happy-asian-woman-doctor-on-white-background.jpg?s=2048x2048&w=is&k=20&c=tHoVT9ZfqCd9bk0kTc9yJ-oFn83jUxIAGjyufLu_M-8="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Alexander Clark",
@@ -105,7 +105,7 @@ const doctors = [
       phone: 5550123456,
       email: "alexander.clark@email.com",
       price: 240,
-      image:"https://plus.unsplash.com/premium_photo-1661602389973-9974b1f53477?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Abigail Moore",
@@ -114,7 +114,7 @@ const doctors = [
       phone: 5550123456,
       email: "abigail.moore@email.com",
       price: 220,
-      image: "https://media.istockphoto.com/id/1701942673/photo/dentist-using-technology.jpg?s=2048x2048&w=is&k=20&c=rdHkzOSnqZ-BDsZG2cQ8R_DHwz_KRdaG2CgPJVTrnW0="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. James Lewis",
@@ -123,7 +123,7 @@ const doctors = [
       phone: 5550123456,
       email: "james.lewis@email.com",
       price: 450,
-      image:"https://images.unsplash.com/photo-1659353887238-d6c8506a1b5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Harper Lee",
@@ -132,7 +132,7 @@ const doctors = [
       phone: 5550123456,
       email: "harper.lee@email.com",
       price: 260,
-      image:"https://media.istockphoto.com/id/1200980408/photo/beautiful-asian-doctor-lady-pointing-with-hand-on-copy-space-studio-shot-isolated-on-a-blue.jpg?s=2048x2048&w=is&k=20&c=36v5nOpeMkDgWZCnOtexeHMCtdXHUi_qEgUW84QHYuc="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Daniel Harris",
@@ -141,7 +141,7 @@ const doctors = [
       phone: 5550123456,
       email: "daniel.harris@email.com",
       price: 280,
-      image:"https://media.istockphoto.com/id/1327959377/photo/female-doctor-using-stethoscope-listening-to-senior-patients-breathing.jpg?s=2048x2048&w=is&k=20&c=nfIzZUylLbGQnfTIFC_0nM1fnIVZlQD_Xm6Pg_o3iBM="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Ella King",
@@ -150,7 +150,7 @@ const doctors = [
       phone: 5550123456,
       email: "ella.king@email.com",
       price: 210,
-      image:"https://media.istockphoto.com/id/674101472/photo/doctor-checking-blood-pressure.jpg?s=2048x2048&w=is&k=20&c=Vci8Xvah3sDCC1MjQHSSFVgDBkSzJpEHbY-Fc0PsGiY="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Matthew Evans",
@@ -159,7 +159,7 @@ const doctors = [
       phone: 5550123456,
       email: "matthew.evans@email.com",
       price: 350,
-      image:"https://media.istockphoto.com/id/916057930/photo/smiling-pretty-female-doctor-holding-empty-space.jpg?s=2048x2048&w=is&k=20&c=W1DYLLJ4XM0ebMF3l0jWbkXpyiSWvD7I_G7cWQ7teNM="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Lily Green",
@@ -168,7 +168,7 @@ const doctors = [
       phone: 5550123456,
       email: "lily.green@email.com",
       price: 230,
-      image:"https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     },
     {
       name: "Dr. Oliver Carter",
@@ -177,7 +177,7 @@ const doctors = [
       phone: 5550123456,
       email: "oliver.carter@email.com",
       price: 200,
-      image: "https://media.istockphoto.com/id/1556008321/photo/beautiful-and-professional-female-doctor-using-laptop-computer-working-at-her-desk-in-the.jpg?s=2048x2048&w=is&k=20&c=NoAmQshlW5Dp8265WpoWE8fYMTYWG6Tp34eCElM75-A="
+      description:"compassionate and experienced physician dedicated to providing high-quality, personalized care. With a strong background in [specialty], Dr. [Name] combines medical expertise with a patient-centered approach to promote wellness and improve health outcomes."
     }
   ];
 module.exports={data:doctors};

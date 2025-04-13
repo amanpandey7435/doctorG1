@@ -1,8 +1,9 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
 <div class="row">
     <div class="card ones" style="width: 35rem;">
-        <img src="<%=doctor.image%>"  class="card-img-top" alt="..." style="margin-top: 0.5rem;height:20rem;">
+        <img src="<%=doctor.image.url%>"  class="card-img-top" alt="..." style="margin-top: 0.5rem;height:20rem;">
         <div class="card-body">
+          <i>Owned by <%=doctor.owner.username%> </i>
           <h5 class="card-title" style="font-weight: bold;"><%=doctor.name%></h5>
           <ul>
             <li><p>Specializations:&nbsp;<%=doctor.specializations%></li></p>
@@ -11,6 +12,7 @@
             <li><p>Contact No:&nbsp;<%=doctor.phone%></li></p>
             <li><p>Address:&nbsp;<%=doctor.address%></li></p>
           </ul>
+          <%if(currUser && currUser._id.equals(doctor.owner._id)){%>
           <div class="button">
             <form action="/<%=doctor._id%>/editlisting" method="GET">
                 <button class="btn btn-secondary edit-btn"  >Edit Your Listing</button>
@@ -19,8 +21,13 @@
                 <button class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i>Delete</button>
               </form>
           </div>
+          <%}%>
         </div>
       </div>
+      <div class="col-6 mt-3 description-box">
+        <p><b>Overview-</b><%=doctor.description%></p>
+      </div>
+
 </div>
 <div class="col-5 mb-3">
   <hr>
@@ -64,15 +71,17 @@
       <%for(i of doctor.review){%>
       <div class="card col-3 mb-3 ms-3 reviewCard">
           <div class="card-body">
-              <h5 class="card-title">@<%=i.author%></h5>
+              <h5 class="card-title">@<%=i.author.username%></h5>
               <p class="starability-result card-text" data-rating="<%=i.rating%>"></p>
               <p class="card-text"><%=i.comment%></p>
               
           </div>
-          
+          <%if(currUser && currUser._id.equals(i.author._id)){%>
           <form method="post" action="/reviews/<%= doctor._id %>/<%=i._id%>?_method=DELETE" >
               <button class="btn btn-sm btn-dark mb-3">Delete</button>
           </form>
+      <%}%>
+
       </div>
       <%}%>
   </div>

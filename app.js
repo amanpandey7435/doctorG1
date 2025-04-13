@@ -1,4 +1,6 @@
-
+if(process.env.NODE_ENV!="production"){
+    require("dotenv").config();
+    };
 // requiring express
 const express=require("express");
 const app=express();
@@ -8,7 +10,7 @@ const LocalStrategy=require("passport-local");
 const port=8080;
 // path
 const path=require("path");
-
+const flash=require("connect-flash")
 // requiring method-override
 const methodOverride=require("method-override");
 app.use(express.json());
@@ -39,7 +41,7 @@ const sessionOptions = {
     },
 };
 app.use(session(sessionOptions));
-
+app.use(flash());
 // passport setup code
 app.use(passport.initialize());
 app.use(passport.session());
@@ -50,6 +52,11 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use((req,res,next)=>{
     res.locals.currUser=req.user;
+    next();
+  });
+  app.use((req,res,next)=>{
+    res.locals.success=req.flash('success');
+    res.locals.failure=req.flash('failure');
     next();
   })
 
