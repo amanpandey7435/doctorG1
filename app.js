@@ -79,11 +79,13 @@ const doctorsRouter=require("./routes/listings");
 
 const userRouter = require("./routes/user.js");
 const reviewsRouter = require("./routes/review");
+const appointmentRouter=require("./routes/appointment");
 
 // home route
 app.use("/", doctorsRouter);
 app.use("/user", userRouter);
 app.use("/reviews", reviewsRouter);
+app.use("/appointment",appointmentRouter)
 
 
 //requiring and express error handling

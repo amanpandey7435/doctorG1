@@ -27,8 +27,11 @@
       <div class="col-6 mt-3 description-box">
         <p><b>Overview-</b><%=doctor.description%></p>
       </div>
-
-</div>
+      <%if(currUser){%>
+      <form action="/appointment/<%=doctor._id%>/<%=currUser._id%>">
+      <button class="btn btn-success">Book</button>
+      </form><%}%>
+    </div>
 <div class="col-5 mb-3">
   <hr>
       <h4>Leave a review</h4>
