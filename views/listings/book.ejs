@@ -1,59 +1,78 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
-<h3>Book Appointment</h3>
-<form>
-  <div class="form-group row col-8 offset-3 mb-3">
-    <label for="name" class="col-sm-2 col-form-label">Patients Name</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" name="appointment[name]" placeholder="e.g: Jane Doe">
-    </div>
-  </div>
-  <div class="form-group row col-8 offset-3 mb-3">
-    <label for="email" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="name" name="appointment[email]">
-    </div>
-  </div>
-  <div class="form-group row col-8 offset-3 mb-3">
-    <label for="contact" class="col-sm-2 col-form-label">Contact Number</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="contact" name="appointment[phone]">
-    </div>
-  </div>
-  <div class="form-group row col-8 offset-3 mb-3">
-    <label for="date" class="col-sm-2 col-form-label">Select Date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="date" name="appointment[date]">
-    </div>
-  </div>
-  <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Slot</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            10-11
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios2" value="12-1">
-          <label class="form-check-label" for="gridRadios2">
-            12-1
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios3" value="2-3">
-          <label class="form-check-label" for="gridRadios3">
-            2-3
-          </label>
-        </div>
+
+<div class="row offset-4">
+  <h3>Book Appointment</h3>
+  <form>
+    <div class="form-group">
+      <label for="name" class="col-sm-2 col-form-label">Patients Name</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="name" name="appointment[name]" placeholder="e.g: Jane Doe">
       </div>
     </div>
-  </fieldset>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Book</button>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-7">
+        <input type="email" placeholder="email@id" class="form-control" id="email" name="appointment[email]">
+      </div>
     </div>
-  </div>
-</form>
-  
+    <div class="form-group">
+      
+      <label for="contact"class="col-sm-2 col-form-label">Contact Number</label>
+      <div class="col-sm-7">
+        <input type="number"  placeholder="91+"  class="form-control" id="contact" name="appointment[phone]">
+      </div>
+    </div>
+    <div class="form-group ">
+      
+      <div class="col-sm-4 dates">
+        <label for="date" class="col-sm-2 col-form-label">Dates:</label>
+        <input type="text" class="form-control" id="calendar" name="appointment[date]" placeholder="Select a date">
+
+      
+     <div class="slots">
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Slot</legend>
+            <div class="radios col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  10-11
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios2" value="12-1">
+                <label class="form-check-label" for="gridRadios2">
+                  12-13
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios3" value="2-3">
+                <label class="form-check-label" for="gridRadios3">
+                  14-17
+                </label>
+              </div>
+            </div>
+         
+        </fieldset>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-7">
+          <button type="submit" class="btn btn-primary">Book</button>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    
+    
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#calendar", {
+    minDate: "today",             // can't pick past dates
+    maxDate: new Date().fp_incr(45),  // limit to 21 days (3 weeks) from today
+    dateFormat: "Y-m-d"
+  });
+</script>

@@ -163,3 +163,16 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0
     background: linear-gradient(135deg, rgba(173, 216, 230, 1), rgba(186, 104, 200, 1));
 } */
 
+/* radio button */
+.radios{
+    display:flex;
+}
+.dates{
+    display: flex;
+    flex-direction: column;
+    
+}
+.slots
+{
+    margin-top: 0.5rem;
+}
