@@ -4,7 +4,12 @@
         <img src="<%=doctor.image.url%>"  class="card-img-top" alt="..." style="margin-top: 0.5rem;height:20rem;">
         <div class="card-body">
           <i>Owned by <%=doctor.owner.username%> </i>
-          <h5 class="card-title" style="font-weight: bold;"><%=doctor.name%></h5>
+          
+          
+        </div>
+      </div>
+      <div class="col-6 mt-3 description-box">
+        <h5 class="card-title" style="font-weight: bold;"><%=doctor.name%></h5>
           <ul>
             <li><p>Specializations:&nbsp;<%=doctor.specializations%></li></p>
             <li><p>Book Appointment for just:&#8377;<%=doctor.price%></li></p>
@@ -13,28 +18,27 @@
             <li><p>Address:&nbsp;<%=doctor.address%></li></p>
             <li><p>Slots:&nbsp;<%=doctor.slots%></li></p>
           </ul>
-          <%if(currUser && currUser._id.equals(doctor.owner._id)){%>
-          <div class="button">
-            <form action="/<%=doctor._id%>/editlisting" method="GET">
-                <button class="btn btn-secondary edit-btn"  >Edit Your Listing</button>
-              </form>
-              <form action="/<%=doctor._id%>?_method=DELETE" method="POST">
-                <button class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i>Delete</button>
-              </form>
-          </div>
-          <%}%>
-        </div>
-      </div>
-      <div class="col-6 mt-3 description-box">
         <p><b>Overview-</b><%=doctor.description%></p>
+        <%if(currUser){%>
+          <form action="/appointment/<%=doctor._id%>/<%=currUser._id%>">
+          <button class="btn btn-success">Book</button>
+          </form><%}%>
       </div>
-      <%if(currUser){%>
-      <form action="/appointment/<%=doctor._id%>/<%=currUser._id%>">
-      <button class="btn btn-success">Book</button>
-      </form><%}%>
+      
     </div>
-<div class="col-5 mb-3">
+    <%if(currUser && currUser._id.equals(doctor.owner._id)){%>
+      <div class="button">
+        <form action="/<%=doctor._id%>/editlisting" method="GET">
+            <button class="btn btn-secondary edit-btn"  >Edit Your Details</button>
+          </form>
+          <form action="/<%=doctor._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i>Delete Profile</button>
+          </form>
+      </div>
+      <%}%>
   <hr>
+
+<div class="col-5 mb-3">
       <h4>Leave a review</h4>
       <div>
           <form action="/reviews/<%=doctor._id%>" method="post" class="needs-validation" novalidate>
