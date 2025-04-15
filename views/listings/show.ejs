@@ -11,6 +11,7 @@
             <li><p>Email-Id:<%=doctor.email%></li></p>
             <li><p>Contact No:&nbsp;<%=doctor.phone%></li></p>
             <li><p>Address:&nbsp;<%=doctor.address%></li></p>
+            <li><p>Slots:&nbsp;<%=doctor.slots%></li></p>
           </ul>
           <%if(currUser && currUser._id.equals(doctor.owner._id)){%>
           <div class="button">

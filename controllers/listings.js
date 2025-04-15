@@ -23,7 +23,9 @@ module.exports.newPostroute=wrapAsync(async(req,res,next)=>{
     const filename=req.file.filename;
     const doctor=new Doctor(req.body.doctor);
     const specArray=req.body.doctor.specializations.split(",");
+    const slotsArray=req.body.doctor.slots.split(",");
     doctor.specializations=specArray;
+    doctor.slots=slotsArray;
     doctor.image=await {url,filename};
     doctor.owner=req.user._id;
     
@@ -34,9 +36,10 @@ module.exports.newPostroute=wrapAsync(async(req,res,next)=>{
 
 module.exports.updateListing=wrapAsync(async(req,res)=>{
     const {id}=req.params;
-    let {specializations,...rest}=req.body.doctor;
+    let {specializations,slots,...rest}=req.body.doctor;
     let specArray=specializations.split(",");
-    const doctor=await Doctor.findByIdAndUpdate(id,{...rest,specializations:specArray},{new:true});
+    let slotsArray=slots.split(",");
+    const doctor=await Doctor.findByIdAndUpdate(id,{...rest,specializations:specArray,slots:slotsArray},{new:true});
     await doctor.save();
     req.flash("success","Details Updated");
     return res.redirect(`/${id}`);

@@ -38,14 +38,18 @@
         <input type="file" name="doctor[image]" placeholder="Image/optional" class="form-control"/>
     </div>
         
-        <div class="mb-1">
+        <div class="mb-3">
             <lable for="country" class="form-label">Your Email-id</lable>
             <input type="email" name="doctor[email]" placeholder="Email" class="form-control" required/>
             <div class="invalid-feedback">Invalid Email-id</div>
         </div>
-    <div class="">
-        <lable for="image" class="form-label">Enter your speacializations separated by a ","</lable>
-        <input type="text" name="doctor[specializations]" placeholder="e.g: Cardiology,Neuro Surgeon,Dentist" class="form-control" required/>
+    <div class="mb-3">
+        <lable for="specializations" class="form-label">Enter your speacializations separated by a ","</lable>
+        <input type="text" id="speacializations" name="doctor[specializations]" placeholder="e.g: Cardiology,Neuro Surgeon,Dentist" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <lable for="specializations" class="form-label">Enter the time slots you are available at, separated by a ","</lable>
+        <input type="text" id="speacializations" name="doctor[slots]" placeholder="e.g: 10-11,12-1,2-3,4-7" class="form-control" required/>
     </div>
     <br>
     <div>

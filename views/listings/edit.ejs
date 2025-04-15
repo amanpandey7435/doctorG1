@@ -13,6 +13,11 @@
     </div>
     <div class="mb-3">
 
+        <label for="slots" class="form-label">Edit time slots separated by a ","(e.g:10-12,1-2,4-6)</label>
+        <input type="text" class="form-control" required name="doctor[slots]" id="slots" value="<%=doctor.slots%>">
+        </div>
+    <div class="mb-3">
+
         <label for="description" class="form-label">Description:</label>
         <textarea type="text" class="form-control" required name="doctor[description]" id="description" cols="30" rows="5"><%=doctor.description%></textarea>
         </div>

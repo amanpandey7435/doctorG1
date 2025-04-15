@@ -7,6 +7,6 @@ const reviewController=require("../controllers/reviews.js");
 const {isLoggedIn,isReviewAuthor}=require("../middlewares.js");
 const { bookingpage } = require("../controllers/appointments.js");
 
-router.route("/:id/:doctorid")
+router.route("/:doctorid/:userid")
 .get(isLoggedIn,bookingpage);
 module.exports=router;

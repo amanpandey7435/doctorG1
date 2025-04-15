@@ -1,3 +1,4 @@
+const { required } = require("joi");
 const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
 const doctorSchema=new Schema({
@@ -16,6 +17,7 @@ const doctorSchema=new Schema({
           type:String,
           default:""}
     },
+    slots:[{type:String,required:true}],
     review:[{
       type:Schema.Types.ObjectId,
       ref:"Review"

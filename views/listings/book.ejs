@@ -25,7 +25,7 @@
     <div class="form-group ">
       
       <div class="col-sm-4 dates">
-        <label for="date" class="col-sm-2 col-form-label">Dates:</label>
+        <label for="date" class="col-sm-5 col-form-label mb-1">Select Date</label>
         <input type="text" class="form-control" id="calendar" name="appointment[date]" placeholder="Select a date">
 
       
@@ -34,24 +34,14 @@
           <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Slot</legend>
             <div class="radios col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                  10-11
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios2" value="12-1">
-                <label class="form-check-label" for="gridRadios2">
-                  12-13
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios3" value="2-3">
-                <label class="form-check-label" for="gridRadios3">
-                  14-17
-                </label>
-              </div>
+              <%for(slot of doctor.slots){%>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios" value="<%=slot%>">
+                  <label class="form-check-label" for="gridRadios">
+                    <%=slot%>
+                  </label>
+                </div>
+                <%}%>
             </div>
          
         </fieldset>
@@ -73,6 +63,6 @@
   flatpickr("#calendar", {
     minDate: "today",             // can't pick past dates
     maxDate: new Date().fp_incr(45),  // limit to 21 days (3 weeks) from today
-    dateFormat: "Y-m-d"
+    dateFormat: "d-m-Y"
   });
 </script>

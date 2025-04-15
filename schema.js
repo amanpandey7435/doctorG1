@@ -8,6 +8,7 @@ module.exports.doctorSchema=Joi.object({
         phone:Joi.number().required(),
         image:Joi.string().allow("",null),
         email:Joi.string().required(),
-        specializations:Joi.string().required()
+        specializations:Joi.string().required(),
+        slots:Joi.string().required()
     }).required()
 });
