@@ -85,7 +85,7 @@ const appointmentRouter=require("./routes/appointment");
 app.use("/", doctorsRouter);
 app.use("/user", userRouter);
 app.use("/reviews", reviewsRouter);
-app.use("/appointment",appointmentRouter)
+app.use("/appointment",appointmentRouter);
 
 
 //requiring and express error handling

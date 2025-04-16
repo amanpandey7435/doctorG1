@@ -2,7 +2,7 @@
 
 <div class="row offset-4">
   <h3>Book Appointment</h3>
-  <form>
+  <form action="/appointment/<%= doctor._id%>/<%=user._id%>" method="POST">
     <div class="form-group">
       <label for="name" class="col-sm-2 col-form-label">Patients Name</label>
       <div class="col-sm-7">
@@ -48,7 +48,9 @@
       </div>
       <div class="form-group row">
         <div class="col-sm-7">
-          <button type="submit" class="btn btn-primary">Book</button>
+          <a href="/appointment/<%=doctor._id%>/<%=user._id%>">
+            <button type="submit" class="btn btn-primary">Book</button>
+          </a>
         </div>
       </div>
       </div>

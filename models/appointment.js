@@ -12,4 +12,4 @@ const AppointmentSchema=new Schema({
     status:{type:String}
 });
 
-module.export=mongoose.model("Appointment",AppointmentSchema);
+module.exports=mongoose.model("Appointment",AppointmentSchema);

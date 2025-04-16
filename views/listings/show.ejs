@@ -20,9 +20,8 @@
           </ul>
         <p><b>Overview-</b><%=doctor.description%></p>
         <%if(currUser){%>
-          <form action="/appointment/<%=doctor._id%>/<%=currUser._id%>">
-          <button class="btn btn-success">Book</button>
-          </form><%}%>
+          <a href="/appointment/<%= doctor._id %>/<%= currUser._id %>" class="btn btn-success">Book</a>
+          <%}%>
       </div>
       
     </div>
