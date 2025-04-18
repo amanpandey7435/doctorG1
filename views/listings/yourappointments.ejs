@@ -1,0 +1,32 @@
+<% layout('/layouts/boilerplateCode.ejs') -%>
+
+
+<% if (appointments.length === 0) { %>
+  <div class="alert alert-primary" role="alert">
+    <p class="offset-4">🚫 Sorry!Looks like you have no upcoming appointments</p>
+  </div>
+<% } else { %>
+  <h1>Your Appointments</h1>
+  <div class="row">
+    <% for (let i = 0; i < appointments.length; i++) { %>
+    
+      <div class="card" style="width: 25rem;">
+        <img src="<%= appointments[i].doctor.image.url %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            Patient Name: <%= appointments[i].name %> <br>
+            Doctor: <%= appointments[i].doctor.name %>
+          </h5>
+          <p class="card-text">
+            Slot: <%= appointments[i].slot %> <br>
+            Date: <%= new Date(appointments[i].date).toLocaleDateString('en-GB') %>
+          </p>
+          <form action="/appointment/<%=appointments[i].id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i>Cancel appointment</button>
+          </form>
+        </div>
+      </div>
+    <% } %>
+  </div>
+
+<% } %> 

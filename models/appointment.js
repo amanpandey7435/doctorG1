@@ -8,7 +8,7 @@ const AppointmentSchema=new Schema({
     date:{type:Date,required:true},
     slot:{type:String},
     user:{type:Schema.Types.ObjectId,ref:"User"},
-    doctor:{type:Schema.Types.ObjectId,ref:"Doctor" },
+    doctor:{type:Schema.Types.ObjectId,ref:"Listing" },
     status:{type:String}
 });
 

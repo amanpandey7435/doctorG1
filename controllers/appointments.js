@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Review=require("../models/review");
 const Doctor=require("../models/doctor");
+
 const Appointment=require("../models/appointment.js");
 const moment = require('moment');
 
@@ -35,7 +36,39 @@ const date=req.query.date;
     req.flash("success","Appointment booked");
     res.redirect(`/${doctorid}`);
 };
+ 
   
+
+  module.exports.yourappointment = async (req, res) => {
+    const { userid } = req.params;
+  
+    if (!mongoose.Types.ObjectId.isValid(userid)) {
+      req.flash("error", "Invalid user ID.");
+      return res.render("listings/error");  // render error page directly
+    }
+  
+    try {
+      const appointments = await Appointment.find({ user: userid }).populate("doctor");
+      if (appointments.length === 0) {
+        req.flash("error", "No appointments found.");
+        return res.render("listings/yourappointments.ejs",{appointments});  // render error page directly
+      }
+      console.log(appointments);
+      res.render("listings/yourappointments.ejs", { appointments });
+    } catch (err) {
+      console.error("Error fetching appointments:", err);
+      req.flash("error", "Something went wrong.");
+      return res.render("listings/yourappointments.ejs");  // render error page directly
+    }
+  };
+  
+  module.exports.deleteAppointments=async(req,res)=>{
+    let {appointmentid}=req.params;
+   const appointment=await Appointment.findByIdAndDelete(appointmentid);
+    console.log(appointment);
+    req.flash("success","Your appointment is deleted");
+    res.redirect("/")
+  }
 module.exports.searchSlot=async(req,res)=>{
   const {doctorid,userid}=req.params;
   const count=req.count;
