@@ -1,10 +1,10 @@
 <% layout('/layouts/boilerplateCode.ejs') -%>
 
 <div class="row offset-4">
-  <h3>Book Appointment</h3>
-  <form action="/appointment/<%= doctor._id%>/<%=user._id%>" method="POST">
+  <h3>Book Appointment <span class="badge rounded-pill text-bg-info"><%=count%>/10 Booked</span></h3>
+  <form action="/appointment/<%= doctor._id %>/<%= user._id %>" method="POST">
     <div class="form-group">
-      <label for="name" class="col-sm-2 col-form-label">Patients Name</label>
+      <label for="name" class="col-sm-2 col-form-label">Patient's Name</label>
       <div class="col-sm-7">
         <input type="text" class="form-control" id="name" name="appointment[name]" placeholder="e.g: Jane Doe">
       </div>
@@ -16,55 +16,43 @@
       </div>
     </div>
     <div class="form-group">
-      
-      <label for="contact"class="col-sm-2 col-form-label">Contact Number</label>
+      <label for="contact" class="col-sm-2 col-form-label">Contact Number</label>
       <div class="col-sm-7">
-        <input type="number"  placeholder="91+"  class="form-control" id="contact" name="appointment[phone]">
+        <input type="number" placeholder="91+" class="form-control" id="contact" name="appointment[phone]">
       </div>
     </div>
-    <div class="form-group ">
-      
+    <div class="form-group">
       <div class="col-sm-4 dates">
-        <label for="date" class="col-sm-5 col-form-label mb-1">Select Date</label>
-        <input type="text" class="form-control" id="calendar" name="appointment[date]" placeholder="Select a date">
-
-      
-     <div class="slots">
+        <label for="date" class="col-sm-5 col-form-label">Selected Date</label>
+        <input type="text" class="form-control mb-2" id="calendar" value="<%= date %>" disabled>
+        <!-- Hidden field for submitting the date -->
+        <input type="hidden" name="appointment[date]" value="<%= date %>">
+      </div>
+      <div class="slots">
         <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Slot</legend>
-            <div class="radios col-sm-10">
-              <%for(slot of doctor.slots){%>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="appointment[slot]" id="gridRadios" value="<%=slot%>">
-                  <label class="form-check-label" for="gridRadios">
-                    <%=slot%>
-                  </label>
-                </div>
-                <%}%>
+          <div class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Selected Slot <br></legend>
+            <div class="radios col-sm-2">
+              <input type="text" class="form-control" value="<%= slot %>" disabled>
+              <!-- Hidden field for submitting the slot -->
+              <input type="hidden" name="appointment[slot]" value="<%= slot %>">
             </div>
-         
+          </div>
         </fieldset>
       </div>
       <div class="form-group row">
         <div class="col-sm-7">
-          <a href="/appointment/<%=doctor._id%>/<%=user._id%>">
-            <button type="submit" class="btn btn-primary">Book</button>
-          </a>
+          <button type="submit" class="btn btn-primary">Book</button>
         </div>
       </div>
-      </div>
-      </div>
     </div>
-    
-    
   </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
   flatpickr("#calendar", {
-    minDate: "today",             // can't pick past dates
-    maxDate: new Date().fp_incr(45),  // limit to 21 days (3 weeks) from today
+    minDate: "today",
+    maxDate: new Date().fp_incr(45),
     dateFormat: "d-m-Y"
   });
 </script>

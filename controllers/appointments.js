@@ -11,24 +11,36 @@ module.exports.bookingpage = async (req, res) => {
     const { doctorid, userid } = req.params;
 const doctor = await Doctor.findById(doctorid);
 const user = await User.findById(userid);
+const count=req.query.count;
+const slot=req.query.slot;
+const date=req.query.date;
+
   
-    res.render("listings/book", { doctor, user });
+    res.render("listings/book", { doctor, user,count,slot,date });
   };
   
   
   module.exports.bookinpost = async (req, res) => {
     const { doctorid, userid } = req.params;
-    // const { appointment } = req.body;
 
    const newAppointment=new Appointment(req.body.appointment);
     newAppointment.name=req.body.appointment.name;
-    newAppointment.doctor=req.body.appointment.doctor;
+    newAppointment.doctor=doctorid;
+    newAppointment.user=userid;
     newAppointment.phone=req.body.appointment.phone;
-    newAppointment.date = moment(req.body.appointment.date, "DD-MM-YYYY").toDate();
+    newAppointment.date = moment(req.body.appointment.date, "DD-MM-YYYY").add(5.5,"hours").toDate();
     newAppointment.slot=req.body.appointment.slot;
 
     await newAppointment.save();
     req.flash("success","Appointment booked");
-    res.redirect(`/appointment/${doctorid}/${userid}`);
+    res.redirect(`/${doctorid}`);
 };
   
+module.exports.searchSlot=async(req,res)=>{
+  const {doctorid,userid}=req.params;
+  const count=req.count;
+  const slot=req.slot;
+  const date=req.date;
+  res.redirect(`/appointment/${doctorid}/${userid}?count=${count}&slot=${slot}&date=${date}`);
+
+};

@@ -8,7 +8,7 @@ async function main() {
 
 const initDb=async()=>{
     await Doctor.deleteMany({});
-    initData.data=initData.data.map((obj)=>({...obj,owner:'67f12fc4a743d19ceff51bae'}));
+    initData.data=initData.data.map((obj)=>({...obj,owner:'67f0bdbc2ae5094c0feb5b58'}));
     initData.data=initData.data.map((obj)=>({...obj,slots:["10-11"]}));
     await Doctor.insertMany(initData.data);
     console.log("Data isinserted");
