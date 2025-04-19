@@ -52,11 +52,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
     res.locals.currUser = req.user;
-    if (res.locals.currUser) {
-        console.log(res.locals.currUser.id);
-    } else {
-        console.log("No user logged in");
-    }
     next();
 });
   app.use((req,res,next)=>{

@@ -46,6 +46,7 @@
             <li class="nav-item"><a href="/user/login" class="nav-link active" ><i class="fa-solid fa-arrow-down"></i>&nbsp;&nbsp;Login</a></li>
          <% }%>
           <%if(currUser){%>
+            <li class="nav-item"><a href="/appointment/seepatients/<%=currUser.id%>" class="nav-link active">Your Patients</a></li>
             <li class="nav-item"><a href="/appointment/<%=currUser.id%>" class="nav-link active">Your Appointments</a></li>
             <li class="nav-item"><a href="/user/logout" class="nav-link active" >Logout</a></li>
           <%}%>

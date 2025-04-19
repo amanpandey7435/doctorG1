@@ -5,7 +5,8 @@ const mongoose=require("mongoose");
 const cloudinary=require("cloudinary");
 module.exports.index=wrapAsync(async(req,res,next)=>{
     let doctors=await Doctor.find({});
-    res.render("listings/index.ejs",{doctors});
+    const heading="All Doctors";
+    res.render("listings/index.ejs",{doctors,heading});
 })
 
 module.exports.show=wrapAsync(async(req,res,next)=>{

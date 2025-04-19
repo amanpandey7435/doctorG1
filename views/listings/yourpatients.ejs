@@ -1,0 +1,25 @@
+<% layout('/layouts/boilerplateCode.ejs') -%>
+<%= new Date(today).toDateString() %>
+
+<table class="table table-hover mt-5">
+  <thead>
+    <tr class="table-warning">
+      <th scope="col">Patient's Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Slot</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <% for (appointment of appointments) { 
+         const appointmentDate = new Date(appointment.date).setHours(0, 0, 0, 0);%>
+      <tr class="<%= appointmentDate < today ? 'table-primary' : 'table-secondary' %>">
+        <th scope="row"><%= appointment.name %></th>
+        <td><%= new Date(appointment.date).toDateString() %></td>
+        <td><%= appointment.slot %></td>
+        <td><%= appointment.phone %></td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

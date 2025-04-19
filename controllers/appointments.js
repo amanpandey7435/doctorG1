@@ -53,7 +53,6 @@ const date=req.query.date;
         req.flash("error", "No appointments found.");
         return res.render("listings/yourappointments.ejs",{appointments});  // render error page directly
       }
-      console.log(appointments);
       res.render("listings/yourappointments.ejs", { appointments });
     } catch (err) {
       console.error("Error fetching appointments:", err);
@@ -65,7 +64,6 @@ const date=req.query.date;
   module.exports.deleteAppointments=async(req,res)=>{
     let {appointmentid}=req.params;
    const appointment=await Appointment.findByIdAndDelete(appointmentid);
-    console.log(appointment);
     req.flash("success","Your appointment is deleted");
     res.redirect("/")
   }
@@ -76,4 +74,18 @@ module.exports.searchSlot=async(req,res)=>{
   const date=req.date;
   res.redirect(`/appointment/${doctorid}/${userid}?count=${count}&slot=${slot}&date=${date}`);
 
+};
+module.exports.yourpatients=async(req,res)=>{
+  const {userid}=req.params;
+  const doctors=await Doctor.find({owner:userid});
+  const heading="Select Doctors Profile";
+  res.render("listings/index",{doctors,heading});
+}
+
+module.exports.viewpatients = async (req, res) => {
+  const { doctorid } = req.params;
+  const doctor = await Doctor.findById(doctorid);
+  const appointments = await Appointment.find({ doctor: doctor._id }).sort({ date: 1 });
+  const today = new Date().setHours(0, 0, 0, 0);
+  return res.render("listings/yourpatients", { appointments, today });
 };
